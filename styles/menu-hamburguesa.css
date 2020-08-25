@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+}
+
+header {
+  width: 100%;
+  background: #ff8800;
+  height: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#btn-menu {
+  display: none;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 250px;
+  max-height: 250px;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  overflow: hidden;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
+}
+
+label {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-right: 1px solid #ff6600;
+}
+
+label:hover {
+  cursor: pointer;
+  background: rgba(255, 72, 0, 0.7);
+}
+
+.menu {
+  position: absolute;
+  width: 40%;
+  min-width: 110px;
+}
+
+li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  border-bottom: 1px solid #050505;
+}
+
+li:hover {
+  background: rgba(255, 72, 0, 0.7);
+}
+
+a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: block;
+  padding: 15px 20px;
+  color: black;
+  text-decoration: none;
+}
+
+input:not(:checked) ~ ul {
+  max-height: 0;
+}
+
+@media (min-width: 768px) {
+  label {
+    display: none;
+  }
+  .menu {
+    margin-left: 0;
+    background: #ff8800;
+    border-bottom: none;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 70vw;
+  }
+  li {
+    border-bottom: none;
+  }
+  input:not(:checked) ~ ul {
+    max-height: 50px;
+  }
+  a {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=menu-hamburguesa.css.map */
